@@ -25,5 +25,9 @@
     "react-dom": "^16.7.0",
     "uuid": "8.1.0"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.9.38",
+    "typescript": "^3.9.5"
+  }
 }
