@@ -1,0 +1,52 @@
+version: "3.7"
+services:
+  dice-bag:
+    container_name: dice-bag-app
+    build: .
+    user: "node"
+    working_dir: /home/node/app
+    # environment:
+      # - NODE_ENV=dev
+    volumes:
+      - ./pages/:/home/node/app/pages/:delegated
+      - ./apollo/:/home/node/app/apollo/:delegated
+      - ./lib/:/home/node/app/lib/:delegated
+      - ./components/:/home/node/app/components/:delegated
+      - ./test/:/home/node/app/test/:delegated
+      - ./logs/:/home/node/app/logs/:delegated
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    networks:
+      - default
+      - backend
+      - frontend
+
+  dice-bag-mongo:
+    container_name: dice-bag-mongo
+    image: mongo
+    # build:
+    #   context: ./docker
+      # dockerfile: mysql.Dockerfile
+    # environment:
+    #   - MYSQL_USER=webapp
+    #   - MYSQL_PASSWORD=test-db-pass
+    #   - MYSQL_ROOT_PASSWORD=bidx-graphql
+    volumes:
+      - ./mongo-data:/data/db
+    networks:
+      - backend
+    ports:
+      - "27117:27117"
+    expose:
+      - "27117"
+
+networks:
+  backend:
+  frontend:
+  default:
+
+volumes:
+  node_modules:
+  .next:
