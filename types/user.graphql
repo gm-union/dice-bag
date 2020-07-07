@@ -1,6 +1,3 @@
-import gql from 'graphql-tag'
-
-export const typeDefs = gql`
   type User {
     id: ID!
     email: String!
@@ -36,4 +33,3 @@ export const typeDefs = gql`
     signIn(input: SignInInput!): SignInPayload!
     signOut: Boolean!
   }
-`
