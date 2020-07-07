@@ -46,8 +46,8 @@ function SignUp() {
       <div id="npcApp">
         <div>
           <h2>Sign Up</h2>
-          <form onSubmit={handleSubmit}>
-            {errorMsg && <p>{errorMsg}</p>}
+          <form>
+            { errorMsg && <p>{ errorMsg } </p> }
             <Field
               name="email"
               type="email"

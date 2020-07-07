@@ -43,14 +43,14 @@ const Index = () => {
             <a>signout</a>
           </Link>
         </div>
-        <div id="npcApp">
+        <div class="npcApp">
           <div>
             <h2>My saved NPCs</h2>
-            <div id="npcListOutput">
+            <div class="npcListOutput">
               <p>You have no saved NPCs yet</p>
               <a hre="#">&#36;&#123;npc.name	&#125;</a>
             </div>
-            <div id="randomBtnHolder">
+            <div class="randomBtnHolder">
               <button>
                 Roll a random NPC
               </button>
@@ -59,16 +59,16 @@ const Index = () => {
           <div>
             <div id="npcCardTarget">
 
-              <div>
-                <em>&#36;&#123;npc.name	&#125;</em><br />
-                <span>&#36;&#123;npc.bodyType	&#125; &#36;&#123;npc.background&#125; &#36;&#123;npc.race&#125; (&#36;&#123;npc.gender&#125;)</span><br />
-                <span>Influenced by: &#36;&#123;npc.influencedBy&#125;</span>
+              <div class="npcCard">
+                <em>(Random Name)</em><br />
+                <span>(Random Body Type) (Random Background) (Random Race) (Random Gender)</span><br />
+                <span>Influenced by: (Random Influenced By)</span>
               </div>
 
             </div>
           </div>
           <div>
-            <div id="editGrid">
+            <div class="editGrid">
               <input type="hidden" id="selectedNpcGuid" />
               <label><b>Name</b><input type="text" id="editNameField" /></label>
               <label><b>Body Type</b><input type="text" id="editBodyTypeField" /></label>

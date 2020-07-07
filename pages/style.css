@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -12,118 +11,121 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-    vertical-align: baseline;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: sans-serif;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /****** App specific ******/
-
 h1 {
-    padding: 20px;
-    font-size: 3em;
+  padding: 20px;
+  font-size: 3em;
+  margin: 0 0 20px 0;
 }
 
-#npcApp  {
-    
-    font-size: 1.4em;
-    padding: 20px;
+.npcApp {
+  font-size: 1.4em;
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  background-color: #eaeaea;
+  border: solid 1px #ccc;
 }
 
-#npcApp h1 {
-    margin: 0 0 20px 0;
+.npcApp button {
+  font-size: .7em;
 }
 
-#npcApp button {
-    font-size: .7em;
+.npcApp > div {
+  padding: 10px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+  margin: 10px;
 }
 
-#npcApp  {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: #eaeaea;
-    border: solid 1px #ccc;
+.npcApp .randomBtnHolder {
+  float: right;
+  margin: 0 0 0 5px;
 }
 
-#npcApp > div {
-    padding: 10px;
-    background-color: #fff;
-    border: solid 1px #ccc; 
-    margin: 10px;
+.npcApp .npcListOutput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
 }
 
-#npcApp #randomBtnHolder {
-    float: right;
-    margin: 0 0 0 5px;
+.npcApp > a {
+  display: block;
+  padding: 5px;
+  margin: 15px 0 0 0;
 }
 
-
-#npcApp #saveBtnHolder {
-    text-align: center;
-    margin-top: 30px;
+.npcApp .npcCard {
+  text-align: center;
 }
 
-#npcApp #npcListOutput {
-    display: flex;
-    flex-flow: column wrap;
-    
+.npcApp .npcCard .npcCard > * {
+  display: block;
+  margin-bottom: 10px;
 }
 
-#npcApp #npcListOutput > a {
-    display: block;
-    padding: 5px;
-    margin: 15px 0 0 0;
-} 
-
-#npcApp .npcCard {
-    text-align: center;
+.npcApp .npcCard em {
+  display: block;
+  padding: 6px 0;
+  font-size: 1.3em;
 }
-    #npcApp .npcCard > * {
-        display: block;
-        margin-bottom: 10px;
-    }
-    #npcApp .npcCard em {
-        display: block;
-        padding: 6px 0;
-        font-size: 1.3em;
-    }
 
+.npcApp .editGrid > * {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% auto;
+      grid-template-columns: 30% auto;
+  font-size: .8em;
+  margin: 0 0 10px 0;
+}
 
-#npcApp #editGrid > * {
-    display: grid;
-    grid-template-columns: 30% auto;
-    font-size: .8em;
-    margin: 0 0 10px 0;
+.npcApp .editGrid label > * > * {
+  display: block;
 }
-#npcApp #editGrid label > * > * {
-    display: block;
-}
+/*# sourceMappingURL=style.css.map */
