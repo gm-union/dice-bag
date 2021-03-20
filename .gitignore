@@ -30,3 +30,5 @@ yarn-error.log*
 .env.production.local
 
 mongo-data
+**/*.graphql.d.ts
+**/*.graphqls.d.ts

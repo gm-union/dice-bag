@@ -1,0 +1,7 @@
+schema: schemas/user.graphql
+documents: 'schemas/*.graphql'
+plugins:
+  - typescript
+  - typescript-operations
+  - typescript-react-apollo
+respectGitIgnore: true
